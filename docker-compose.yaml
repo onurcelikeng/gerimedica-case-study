@@ -1,0 +1,14 @@
+#Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: '3.8'
+
+#Define services
+services:
+
+  gerimedica-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gerimedica-csv
+    hostname: gerimedica-service
+    ports:
+      - "8080:8080"
