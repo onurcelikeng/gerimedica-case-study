@@ -1,0 +1,24 @@
+spring:
+  h2:
+    console.enabled: true
+
+  datasource:
+    url: jdbc:h2:mem:csv-db
+    username: admin
+    password: 2b0QP5byXq07eicjNGiX
+    initialization-mode: always
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: create-drop
+
+logging:
+  level:
+    org.springframework: INFO
+
+  file.name: csv-app.log
+  pattern.file: '%d %p %c{1.} [%t] %m%n'
+  pattern.console: '%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n'
