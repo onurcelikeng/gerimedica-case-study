@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "f69f513e-5e35-4a09-b24a-85bc8d4c0772",
+		"name": "Gerimedica CSV Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Upload the data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "csv-file",
+							"type": "file",
+							"src": "/Users/onurcelikeng/Desktop/exercise.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch all data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch by code",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/csv/271636001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"csv",
+						"271636001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/csv",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"csv"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
